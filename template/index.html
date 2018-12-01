@@ -1,11 +1,86 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Оцение поездку на автобусе ${this.num} (маршрут ${this.bus})</title>
-    </head>
-    <body>
-        <div id='body'>
-            <h1 id='title'>Оценка поездки на ${this.bus} маршруте</h1>
-            <input ></input>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/main_page" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+
+
+  <div style="position: relative;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; text-align: center;">
+          <img src="./img/logo" alt="City SUOL" style="margin-top: calc( 10% ); height: 90px;">
+      </div>
+      <img src="./img/map_green" alt="suol" style="width: 100%;">
+  </div>
+
+
+  <div class="container">
+      <div class="row">
+        <div class="col s6">
+          <div class="icon-block">
+            <p class="center grey-text text-darken-4"><b>Маршрут №${this.bus}</b></p>
+          </div>
         </div>
-    </body>
+
+        <div class="col s6">
+          <div class="icon-block">
+            <p class="center grey-text text-darken-3">Гос.номер ${this.num}</p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h5 class="grey-text text-darken-3">Оцените поездку</h5>
+          <p class="center light grey-text">
+            ${ Array(5).fill().map( (e, i) => `<i class="material-icons unclickable star" id='star${i}'>star</i>` ).join('') }
+          </p>
+        </div>
+      </div>
+  </div>
+
+  <div class="container">
+      <div class="row">
+        <div class="col s12">
+          ${ this.fields.map( (e, i) => `<p class='check' id='check${i}' hidden>${ e.map( 
+              (checkBox, j) => `<button class="btn check${i}_child white grey-text" data-id='${checkBox.id}' id='checkBox${j} '>${checkBox.text}</button>`
+          ).join('') }</p>` ).join('') }
+        </div>
+      </div>
+  </div>
+
+  <div class="container">
+
+      <div class="row">
+        <div class="col s12 center">
+            <div class="input-field">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Оставить комментарий</label>
+            </div>
+            <div class="input-field">
+              <input type="submit" value="Отправить" class="btn green" id='submit'>
+            </div>
+        </div>
+      </div>
+
+  </div>
+
+  <!--  Scripts-->
+  <script src="jQuery"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/main_page"></script>
+
+  </body>
 </html>

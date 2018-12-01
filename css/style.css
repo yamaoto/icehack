@@ -1,0 +1,18 @@
+p {
+  line-height: 2rem;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.btn{
+  border-radius: 17.5px;
+  margin:5px; 
+}
+.btn.green{
+  background-color: #3CD242!important;
+}
