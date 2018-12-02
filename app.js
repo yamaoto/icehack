@@ -17,7 +17,7 @@ db.once('open', () => {
 
 const port = process.env.PORT || 8080;
 
-const server = http.createServer((request, response) => {
+const server = http.createServer( async (request, response) => {
     var urlObj = url.parse(request.url, true);
     var bin = true;
     switch (urlObj.pathname)
@@ -80,7 +80,7 @@ const server = http.createServer((request, response) => {
         notFound = true;
         break;
     case "/admin":
-        content = require('./admin_page').getPage();
+        content = await require('./admin_page').getPage();
         break;
 
     case "/index.html":
