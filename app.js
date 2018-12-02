@@ -4,9 +4,12 @@ const fs = require('fs');
 
 const port = 80;
 
+console.log('1');
+
 const server = http.createServer((request, response) => {
     var urlObj = url.parse(request.url, true);
     var bin = true;
+    console.log('2');
     switch (urlObj.pathname)
     {
     case "/jQuery":
@@ -39,6 +42,8 @@ const server = http.createServer((request, response) => {
     var content = '';
     var notFound = false;
     var query = JSON.parse(JSON.stringify(urlObj.query));
+
+    console.log('3');
 
     switch (urlObj.pathname)
     {
@@ -100,11 +105,13 @@ const server = http.createServer((request, response) => {
     }
     if (notFound)
         content = '404';
-
+    
+    console.log('4');
+    
     if (bin)
         response.end(content, 'binary');
     else
         response.end(content);
 }); 
-
+console.log('5');
 server.listen(port);
