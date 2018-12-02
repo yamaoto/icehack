@@ -84,7 +84,7 @@ $(document).ready(function() {
         });
     });
     $('#submit').click(() => {
-        var send = {};
+        var send = {'bus': bus, 'num': num};
         if (last_i != NaN){
             send['value'] = last_i;
             if (check.length > 0)
@@ -95,7 +95,7 @@ $(document).ready(function() {
         var comment = $('#textarea1').val();
         if (comment != '')
             send['comment'] = comment;
-        if (Object.size(send) > 1)
+        if (Object.size(send) > 2)
             post('/submit', send);
     });
 });
