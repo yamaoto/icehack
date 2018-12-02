@@ -5,34 +5,40 @@ function page(bus, num)
         num: num,
         fields: [
             [
-                { id: 'id1', text: '1name1' },
-                { id: 'id2', text: '1name2' },
-                { id: 'id3', text: '1name3' },
-                { id: 'id4', text: '1name4' }
+                { id: 'id1', text: 'Манера вождения' },
+                { id: 'id2', text: 'Грубость вождения' },
+                { id: 'id3', text: 'Долгое ожидание' },
+                { id: 'id4', text: 'Заполненность' },
+                { id: 'id5', text: 'Климат' },
+                { id: 'id6', text: 'Грязный салон' }
             ],
             [
-                { id: 'id1', text: '2name1' },
-                { id: 'id2', text: '2name2' },
-                { id: 'id3', text: '2name3' },
-                { id: 'id4', text: '2name4' }
+                { id: 'id1', text: 'Манера вождения' },
+                { id: 'id2', text: 'Грубость вождения' },
+                { id: 'id3', text: 'Долгое ожидание' },
+                { id: 'id4', text: 'Заполненность' },
+                { id: 'id5', text: 'Климат' },
+                { id: 'id6', text: 'Грязный салон' }
             ],
             [
-                { id: 'id1', text: '3name1' },
-                { id: 'id2', text: '3name2' },
-                { id: 'id3', text: '3name3' },
-                { id: 'id4', text: '3name4' }
+                { id: 'id1', text: 'Манера вождения' },
+                { id: 'id2', text: 'Грубость вождения' },
+                { id: 'id3', text: 'Долгое ожидание' },
+                { id: 'id4', text: 'Заполненность' },
+                { id: 'id5', text: 'Климат' },
+                { id: 'id6', text: 'Грязный салон' }
             ],
             [
-                { id: 'id1', text: '4name1' },
-                { id: 'id2', text: '4name2' },
-                { id: 'id3', text: '4name3' },
-                { id: 'id4', text: '4name4' }
+                { id: 'id7', text: 'Мягкая поездка' },
+                { id: 'id8', text: 'Вежливый водмтель' },
+                { id: 'id9', text: 'Прекрасная атмосфера' },
+                { id: 'id10', text: 'Уютно и чисто' }
             ],
             [
-                { id: 'id1', text: '5name1' },
-                { id: 'id2', text: '5name2' },
-                { id: 'id3', text: '5name3' },
-                { id: 'id4', text: '5name4' }
+                { id: 'id7', text: 'Мягкая поездка' },
+                { id: 'id8', text: 'Вежливый водмтель' },
+                { id: 'id9', text: 'Прекрасная атмосфера' },
+                { id: 'id10', text: 'Уютно и чисто' }
             ]
         ]
     }
