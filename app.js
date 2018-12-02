@@ -1,6 +1,19 @@
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
+const mongoose = require('mongoose');
+
+const mongoURL = 'mongodb://admin:admin1@ds123624.mlab.com:23624/data';
+
+mongoose.connect(mongoURL, {
+    useNewUrlParser: true
+});
+
+const db = mongoose.connection;
+db.on('error', (err) => console.error('Mongoose connection error', err));
+db.once('open', () => {
+    console.log('Mongoose success connection')
+});
 
 const port = process.env.PORT || 8080;
 
@@ -65,6 +78,9 @@ const server = http.createServer((request, response) => {
             break;
         }
         notFound = true;
+        break;
+    case "/admin":
+        content = require('./admin_page').getPage();
         break;
 
     case "/index.html":

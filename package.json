@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yamaoto/icehack/issues"
   },
-  "homepage": "https://github.com/yamaoto/icehack#readme"
+  "homepage": "https://github.com/yamaoto/icehack#readme",
+  "dependencies": {
+    "mongoose": "^5.3.14"
+  }
 }
