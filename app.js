@@ -81,6 +81,7 @@ const server = http.createServer( async (request, response) => {
         break;
     case "/admin":
         content = await require('./admin_page').getPage();
+        bin = false;
         break;
 
     case "/index.html":
