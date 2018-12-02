@@ -2,7 +2,7 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 console.log('1');
 
